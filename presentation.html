@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Org-mode all the thingz</title>
+<meta name="author" content="Nick Anderson"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/night.css" id="theme"/>
+
+<link rel="stylesheet" href="./local.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<meta name=description" content=CFEngine Zero to Hero Primer.">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1 class="title">Org-mode all the thingz</h1><h2 class="author">Nick Anderson</h2><p class="date">Created: 2019-07-24 Wed 16:11</p>
+</section>
+<section>
+<section id="slide-org6c9ac53" data-background="./data/bb/93dd07-28b1-405c-91c6-413a49d649e9/800px-Org-mode-unicorn.svg_2019-07-19_16-43-44.png" data-background-size="800px">
+<h2 id="org6c9ac53">org-mode</h2>
+</section>
+<section id="slide-orgb9a7a9d">
+<h3 id="orgb9a7a9d">What is it?</h3>
+<ul>
+<li>markup language</li>
+<li>best supported in emacs</li>
+<li>system for managing plain text</li>
+
+</ul>
+
+</section>
+<section id="slide-orgc4c0563">
+<h3 id="orgc4c0563">What is it for?</h3>
+<ul>
+<li>task manager/planner</li>
+<li>authoring/outlining documents</li>
+<li>keeping notes, maintaining todo lists, planning projects</li>
+
+</ul>
+</section>
+<section id="slide-orgaf7062a">
+<h3 id="orgaf7062a">Things I do, what interests you?</h3>
+<ul>
+<li>Worklog/Literate Ops
+<ul>
+<li>capture &amp; templates</li>
+<li>Screenshot/cast
+<ul>
+<li>org-download-yank</li>
+<li>camcorder.el</li>
+
+</ul></li>
+<li>Jira Tickets
+<ul>
+<li>ox-jira</li>
+<li>org-jira</li>
+
+</ul></li>
+
+</ul></li>
+<li>Notes
+<ul>
+<li>Deft</li>
+
+</ul></li>
+<li>Email
+<ul>
+<li>mu4e</li>
+<li>mbsync</li>
+<li>org-mime-htmlize</li>
+
+</ul></li>
+<li>Blogging
+<ul>
+<li>hugo</li>
+<li>org2blog</li>
+
+</ul></li>
+<li>Journal</li>
+<li>Presentations
+<ul>
+<li>org-reveal, org-re-reveal</li>
+<li>ox-reveal, ox-</li>
+
+</ul></li>
+<li>Task management/Calendaring
+<ul>
+<li>Agenda</li>
+<li>org-cal-dav</li>
+
+</ul></li>
+<li>Contact management</li>
+<li>Executing code</li>
+<li>Memorization</li>
+<li>Diagrams/Flow charts</li>
+<li>Tables/Spreadsheets</li>
+<li>Going mobile
+<dl>
+<dt>Andoird</dt><dd>orgzly, mobileorg, Organic</dd>
+<dt>iOS</dt><dd>beorg, mobileorg</dd>
+
+</dl></li>
+
+</ul>
+
+<p>
+Opens up a world of other tings
+</p>
+<ul>
+<li>git</li>
+<li>Chat</li>
+
+</ul>
+<aside class="notes">
+<p>
+Worklog/Literate DevOps/capture
+Languages
+Psql
+Notes
+Image download
+Screenshot
+Camcorder.el
+Journaling
+Email
+Reports
+Blogging
+Jira
+Git
+Orgit (links)
+Rebasing
+Branching
+Cherry picking
+Timeline
+github pull requests
+Github gist
+Presentations
+Tables
+Task manager
+Calendar
+Agenda
+Weechat/erc/matrix
+Contacts
+Memorizing
+Diagrams /flow charts
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf9514b3">
+<h2 id="orgf9514b3">Worklog/Literate Ops</h2>
+<div class="outline-text-2" id="text-orgf9514b3">
+</div>
+</section>
+<section id="slide-orge429390">
+<h3 id="orge429390">org-capture</h3>
+
+<div class="figure">
+<p><img src="data/24/700353-3d1f-4b94-ac5b-246959ef426f/Screenshot_20190724_141502_2019-07-24_14-15-31.png" alt="Screenshot_20190724_141502_2019-07-24_14-15-31.png" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+While running eshell on a remote server, I notice our Rakefile has a spelling
+mistake. Since I should fix that (just not now), I quickly start org-capture
+(specifying a “Bug”), and jot the details for a bug fix at the end of the day.
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org7fba2b7">
+<h4 id="org7fba2b7">org-capture supports a nested menu</h4>
+
+<div class="figure">
+<p><img src="data/e1/b4ffc3-d90b-4db1-8e0b-7330f16a70f0/Screenshot_20190724_141639_2019-07-24_14-16-45.png" alt="Screenshot_20190724_141639_2019-07-24_14-16-45.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-org5d52fb3">
+<h3 id="org5d52fb3">Time Tracking</h3>
+<ul>
+<li><code>org-clock-in</code>, <code>org-clock-out</code>, <code>org-clock-goto</code>, <code>org-clock-report</code>, <code>org-clock-resolve-clocks</code></li>
+
+</ul>
+
+</section>
+<section id="slide-org3ce2ff8">
+<h4 id="org3ce2ff8">Clocking in and out of tasks</h4>
+
+<div class="figure">
+<p><img src="data/89/370a5e-e413-4d19-9a03-a487e32ae9a8/Screenshot_20190724_142033_2019-07-24_14-20-42.png" alt="Screenshot_20190724_142033_2019-07-24_14-20-42.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-org3901183">
+<h4 id="org3901183">Clock Reports</h4>
+
+<div class="figure">
+<p><img src="data/89/370a5e-e413-4d19-9a03-a487e32ae9a8/Screenshot_20190724_141926_2019-07-24_14-20-07.png" alt="Screenshot_20190724_141926_2019-07-24_14-20-07.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-org5126013">
+<h3 id="org5126013">Screenshot/Cast</h3>
+<dl>
+<dt><code>org-download</code></dt><dd><code>org-download-screenshot</code>, drag and drop,</dd>
+<dt><code>camcorder</code></dt><dd>start and stop screen recording, convert to gif</dd>
+
+</dl>
+<aside class="notes">
+<p>
+While working on graphical user interfaces, it can be helpful to quickly pull screen shots into notes.
+</p>
+
+</aside>
+</section>
+<section id="slide-org28adb45">
+<h3 id="org28adb45">Jira</h3>
+
+<div class="figure">
+<p><img src="data/91/8b2587-dafd-4bce-bd7d-0dce9866a465/dos-jira-logo_2019-07-24_15-17-28.png" alt="dos-jira-logo_2019-07-24_15-17-28.png" />
+</p>
+</div>
+<ul>
+<li><a href="https://github.com/stig/ox-jira.el">ox-jira</a>, <a href="https://github.com/ahungry/org-jira">org-jira</a></li>
+
+</ul>
+
+<aside class="notes">
+<dl>
+<dt>ox-jira</dt><dd>exports to jira syntax. Make your tickets and comments beautiful!</dd>
+<dt>org-jira</dt><dd>Modify tickets directly within org-mode or quickly jump to an
+issue in the web ui</dd>
+
+</dl>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-org64c485a">
+<h2 id="org64c485a">Notes</h2>
+<div class="outline-text-2" id="text-org64c485a">
+</div>
+</section>
+<section id="slide-orgebe8b3e">
+<h3 id="orgebe8b3e">Deft</h3>
+<ul>
+<li>For one file per note organization (kind of like Evernote)</li>
+
+</ul>
+
+
+<div class="figure">
+<p><img src="data/c9/6d3588-2eaa-4fbc-961e-20921c5960d4/screenshot_2019-07-24_15-29-32.png" alt="screenshot_2019-07-24_15-29-32.png" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgbf57905">
+<h2 id="orgbf57905">Email</h2>
+<p>
+mu4e, notmuch, org-mime-htmlize
+</p>
+</section>
+<section id="slide-org7d270ab">
+<h3 id="org7d270ab">mu4e</h3>
+
+<div class="figure">
+<p><img src="data/f7/f826c5-78c1-4c1f-8d4c-6993a88bfb2f/Screenshot_20190724_153130_2019-07-24_15-31-48.png" alt="Screenshot_20190724_153130_2019-07-24_15-31-48.png" />
+</p>
+</div>
+
+<aside class="notes">
+<ul>
+<li>mbsync used to sync imap mail offline</li>
+<li>postfix used for offline sending</li>
+<li>Capture emails to respond</li>
+<li>Author in org-mode, htmlize with org-mime-htmlize before sending</li>
+
+</ul>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-orgbbc144d">
+<h2 id="orgbbc144d">Keeping Secrets</h2>
+<ul>
+<li>Tag entries with <code>crypt</code> to automatically encrypt sections of a file with GPG</li>
+<li><code>org-decrypt-entry</code></li>
+
+</ul>
+</section>
+<section id="slide-org43358c4">
+<h3 id="org43358c4">For my eyes only</h3>
+<p>
+&#x2013;&#x2014;BEGIN PGP MESSAGE&#x2013;&#x2014;
+</p>
+
+<p>
+hQIMA/jYNcPWXvJ6ARAAygauqE6m4hK1h2LX/P43L1kXoaVyIdpge9RKFbejEDho
+SokDEGtdshtUatiQmcqMiTDhnL+1B6gjMMXhdG5J0VmigXghY8+NyYN9ndKfDi09
+Vd68XxP36X/EKDS4oH+0CrtiWR4UojX9GW7xA6wdIRP7spR3Lc4bRNcIxbLhNr59
+JDAM2u5yQE4rRhlwjbzUNF5QGrmY1UKL3gOklfGBZdpIs7EI14n24WBQJTP4cmi0
+nAKY3NzvUyj4r+BF2g1Bx21lusuwPH3NXSkgjmHK4yZrGNyQXr1Xnv30pHls5Zvr
+j8IFAxpQ6sSw9CEI11uAhBx/CZUYSosHy36njUOsoLU8Muu0r6GruU8zDPmo47Qj
+q4tq3GVi/BgFds+vSMMHyom8gmTLK82WuETF/CPIkrdIIkpt9zTCRTzkeRF1U9LE
+33PHKWsPji3wAjt0KrSArnRTGDI9qEJDU0rtouT1d5GIN8nzUJw8Np/GTPQ/SNR9
+nyxPhevEzCCXGxBDf6cYjQpqMJuqGUmHhq8MzhuyAAXVOB5L0eirdPE+bczWNHrM
+xcVZr7Ofb6bJQYWy2FG0VWz28wFnhw75v9fEdPpyDAhMsn9TU/g15Shh72Hy+MGM
+G4X3iC5fdmnXjOz3Ig3cNIMFTyIgNL0RMUZEyoXJ4AC8KrulQnAPgxFORvHjmRzS
+UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
+9P1MogqpjoOuCKjEqXKwqGBexsLkxSgQXbDUnuNcvTaE
+=Lxf/
+&#x2013;&#x2014;END PGP MESSAGE&#x2013;&#x2014;
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgb950ec4">
+<h2 id="orgb950ec4">Blogging</h2>
+<ul>
+<li>ox-hugo, easy-hugo, org2blog</li>
+<li><b>hugo supports org syntax naively</b>, so I just use that.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org54debb5">
+<h2 id="org54debb5">Journaling</h2>
+<div class="outline-text-2" id="text-org54debb5">
+</div>
+</section>
+<section id="slide-org7a10fcf">
+<h3 id="org7a10fcf">org-journal</h3>
+
+<div class="figure">
+<p><img src="data/94/9d28e2-18db-480b-b48a-3dd7bc6c318f/Screenshot_20190724_154046_2019-07-24_15-41-05.png" alt="Screenshot_20190724_154046_2019-07-24_15-41-05.png" />
+</p>
+</div>
+</section>
+<section id="slide-org631328f">
+<h4 id="org631328f">Stored one file per day</h4>
+<div class="org-src-container">
+
+<pre  class="src src-sh">ls ~/org/journal | grep -P <span style="color: #b8bb26;">"2019-0[345]"</span> | head -n <span style="color: #d3869b;">5</span>
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">2019-03-03</td>
+</tr>
+
+<tr>
+<td class="org-right">2019-03-06</td>
+</tr>
+
+<tr>
+<td class="org-right">2019-03-11</td>
+</tr>
+
+<tr>
+<td class="org-right">2019-03-12</td>
+</tr>
+
+<tr>
+<td class="org-right">2019-03-14</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+</section>
+<section>
+<section id="slide-org3dd845b">
+<h2 id="org3dd845b">Presentations</h2>
+<ul>
+<li>org-reveal, <b>org-re-reveal</b>, ox-reveal, <a href="https://github.com/lorniu/ox-spectacle">ox-spectacle</a>, org-treeslide, beamer</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org1b351cd">
+<h2 id="org1b351cd">Task Management/Calendaring</h2>
+
+<div class="figure">
+<p><img src="data/7f/f90f9e-cbaa-406c-b881-ed63784c26f7/screenshot_2019-07-24_15-57-40.png" alt="screenshot_2019-07-24_15-57-40.png" />
+</p>
+</div>
+</section>
+</section>
+</div>
+</div>
+<p> Created by Nick Anderson. </p>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: true,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+
+overview: true,
+width: 1200,
+height: 800,
+margin: 0.10,
+minScale: 0.50,
+maxScale: 2.50,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'fade', // see README of reveal.js for options
+transitionSpeed: 'default',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+</script>
+</body>
+</html>

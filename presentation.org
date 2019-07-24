@@ -1,0 +1,265 @@
+#+Title: Org-mode all the thingz
+#+Author: Nick Anderson
+#+Email: nick@cmdln.org
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1200 reveal_height:800 tags:nil
+# The TOC is a bit much for a slide show IMHO, but maybe you want it when exporting to html
+#+OPTIONS: toc:nil
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+# Available Transitions: default|cube|page|concave|zoom|linear|fade|none.
+#+REVEAL_TRANS: fade
+#+REVEAL_THEME: night
+# This flattens up to x levels deep
+#+REVEAL_HLEVEL: 1
+#+REVEAL_HEAD_PREAMBLE: <meta name=description" content=CFEngine Zero to Hero Primer.">
+#+REVEAL_POSTAMBLE: <p> Created by Nick Anderson. </p>
+#+REVEAL_PLUGINS: (markdown notes)
+#+REVEAL_EXTRA_CSS: ./local.css
+
+#+DOWNLOADED: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Org-mode-unicorn.svg/800px-Org-mode-unicorn.svg.png @ 2019-07-19 16:43:44
+* org-mode                                                           :ATTACH:
+:PROPERTIES:
+:ID:       bb93dd07-28b1-405c-91c6-413a49d649e9
+:REVEAL_BACKGROUND: ./data/bb/93dd07-28b1-405c-91c6-413a49d649e9/800px-Org-mode-unicorn.svg_2019-07-19_16-43-44.png
+:REVEAL_BACKGROUND_OPACITY: 0.5
+:REVEAL_BACKGROUND_SIZE: 800px 
+:Attachments: 800px-Org-mode-unicorn.svg_2019-07-19_16-43-44.png
+:END:
+
+** What is it?
+- markup language
+- best supported in emacs
+- system for managing plain text
+
+** What is it for?
+:PROPERTIES:
+:ID:       f69170b3-8d72-439d-b3b7-6f0358fb361b
+:END:
+- task manager/planner
+- authoring/outlining documents
+- keeping notes, maintaining todo lists, planning projects
+** Things I do, what interests you?
+
+- Worklog/Literate Ops
+  - capture & templates
+  - Screenshot/cast
+    - org-download-yank
+    - camcorder.el
+  - Jira Tickets
+    - ox-jira
+    - org-jira
+- Notes
+  - Deft
+- Email
+  - mu4e
+  - mbsync
+  - org-mime-htmlize
+- Blogging
+  - hugo
+  - org2blog
+- Journal
+- Presentations
+  - org-reveal, org-re-reveal
+  - ox-reveal, ox-
+- Task management/Calendaring
+  - Agenda  
+  - org-cal-dav
+- Contact management
+- Executing code
+- Memorization
+- Diagrams/Flow charts
+- Tables/Spreadsheets
+- Going mobile
+  - Andoird :: orgzly, mobileorg, Organic
+  - iOS :: beorg, mobileorg
+
+Opens up a world of other tings
+- git
+- Chat
+#+BEGIN_NOTES
+Worklog/Literate DevOps/capture
+Languages
+Psql
+Notes
+Image download
+Screenshot
+Camcorder.el
+Journaling
+Email
+Reports
+Blogging
+Jira
+Git
+Orgit (links)
+Rebasing
+Branching
+Cherry picking
+Timeline
+github pull requests
+Github gist
+Presentations
+Tables
+Task manager
+Calendar
+Agenda
+Weechat/erc/matrix
+Contacts
+Memorizing
+Diagrams /flow charts
+#+END_NOTES
+
+* Worklog/Literate Ops
+** org-capture                                                      :ATTACH:
+:PROPERTIES:
+:ID:       24700353-3d1f-4b94-ac5b-246959ef426f
+:Attachments: Screenshot_20190724_141502_2019-07-24_14-15-31.png
+:END:
+
+#+DOWNLOADED: file:///tmp/Spectacle.gJklMb/Screenshot_20190724_141502.png @ 2019-07-24 14:15:36
+[[file:data/24/700353-3d1f-4b94-ac5b-246959ef426f/Screenshot_20190724_141502_2019-07-24_14-15-31.png]]
+
+#+BEGIN_NOTES
+  While running eshell on a remote server, I notice our Rakefile has a spelling
+  mistake. Since I should fix that (just not now), I quickly start org-capture
+  (specifying a “Bug”), and jot the details for a bug fix at the end of the day.
+#+END_NOTES
+
+*** org-capture supports a nested menu                             :ATTACH:
+:PROPERTIES:
+:ID:       e1b4ffc3-d90b-4db1-8e0b-7330f16a70f0
+:Attachments: Screenshot_20190724_141639_2019-07-24_14-16-45.png
+:END:
+
+#+DOWNLOADED: file:///tmp/Spectacle.gJklMb/Screenshot_20190724_141639.png @ 2019-07-24 14:16:45
+[[file:data/e1/b4ffc3-d90b-4db1-8e0b-7330f16a70f0/Screenshot_20190724_141639_2019-07-24_14-16-45.png]]
+
+** Time Tracking                                                    :ATTACH:
+:PROPERTIES:
+:ID:       89370a5e-e413-4d19-9a03-a487e32ae9a8
+:Attachments: Screenshot_20190724_141926_2019-07-24_14-20-07.png Screenshot_20190724_142033_2019-07-24_14-20-42.png
+:END:
+
+- ~org-clock-in~, ~org-clock-out~, ~org-clock-goto~, ~org-clock-report~, ~org-clock-resolve-clocks~
+
+*** Clocking in and out of tasks
+
+#+DOWNLOADED: file:///tmp/Spectacle.gJklMb/Screenshot_20190724_142033.png @ 2019-07-24 14:20:43
+[[file:data/89/370a5e-e413-4d19-9a03-a487e32ae9a8/Screenshot_20190724_142033_2019-07-24_14-20-42.png]]
+
+*** Clock Reports
+
+#+DOWNLOADED: file:///tmp/Spectacle.gJklMb/Screenshot_20190724_141926.png @ 2019-07-24 14:20:07
+[[file:data/89/370a5e-e413-4d19-9a03-a487e32ae9a8/Screenshot_20190724_141926_2019-07-24_14-20-07.png]]
+
+** Screenshot/Cast
+- =org-download= ::  ~org-download-screenshot~, drag and drop,
+- =camcorder= :: start and stop screen recording, convert to gif
+#+BEGIN_NOTES
+  While working on graphical user interfaces, it can be helpful to quickly pull screen shots into notes.
+#+END_NOTES
+** Jira                                                             :ATTACH:
+:PROPERTIES:
+:ID:       918b2587-dafd-4bce-bd7d-0dce9866a465
+:Attachments: dos-jira-logo_2019-07-24_15-17-28.png
+:END:
+
+#+DOWNLOADED: https://s3.amazonaws.com/doslive/wp-content/uploads/2017/09/16190028/dos-jira-logo.png @ 2019-07-24 15:17:28
+[[file:data/91/8b2587-dafd-4bce-bd7d-0dce9866a465/dos-jira-logo_2019-07-24_15-17-28.png]]
+- [[https://github.com/stig/ox-jira.el][ox-jira]], [[https://github.com/ahungry/org-jira][org-jira]]
+
+#+BEGIN_NOTES
+  - ox-jira :: exports to jira syntax. Make your tickets and comments beautiful!
+  - org-jira :: Modify tickets directly within org-mode or quickly jump to an
+                issue in the web ui
+#+END_NOTES
+* Notes 
+** Deft                                                             :ATTACH:
+:PROPERTIES:
+:ID:       c96d3588-2eaa-4fbc-961e-20921c5960d4
+:Attachments: screenshot_2019-07-24_15-29-32.png
+:END:
+
+- For one file per note organization (kind of like Evernote)
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-07-24 15:29:36
+[[file:data/c9/6d3588-2eaa-4fbc-961e-20921c5960d4/screenshot_2019-07-24_15-29-32.png]]
+* Email 
+
+mu4e, notmuch, org-mime-htmlize
+** mu4e                                                             :ATTACH:
+:PROPERTIES:
+:ID:       f7f826c5-78c1-4c1f-8d4c-6993a88bfb2f
+:Attachments: Screenshot_20190724_153130_2019-07-24_15-31-48.png
+:END:
+
+#+DOWNLOADED: file:///tmp/Spectacle.jWjoFC/Screenshot_20190724_153130.png @ 2019-07-24 15:31:48
+[[file:data/f7/f826c5-78c1-4c1f-8d4c-6993a88bfb2f/Screenshot_20190724_153130_2019-07-24_15-31-48.png]]
+
+#+BEGIN_NOTES
+  - mbsync used to sync imap mail offline
+  - postfix used for offline sending
+  - Capture emails to respond
+  - Author in org-mode, htmlize with org-mime-htmlize before sending
+#+END_NOTES
+* Keeping Secrets
+- Tag entries with =crypt= to automatically encrypt sections of a file with GPG
+- ~org-decrypt-entry~
+** For my eyes only :crypt: 
+-----BEGIN PGP MESSAGE-----
+
+hQIMA/jYNcPWXvJ6ARAAygauqE6m4hK1h2LX/P43L1kXoaVyIdpge9RKFbejEDho
+SokDEGtdshtUatiQmcqMiTDhnL+1B6gjMMXhdG5J0VmigXghY8+NyYN9ndKfDi09
+Vd68XxP36X/EKDS4oH+0CrtiWR4UojX9GW7xA6wdIRP7spR3Lc4bRNcIxbLhNr59
+JDAM2u5yQE4rRhlwjbzUNF5QGrmY1UKL3gOklfGBZdpIs7EI14n24WBQJTP4cmi0
+nAKY3NzvUyj4r+BF2g1Bx21lusuwPH3NXSkgjmHK4yZrGNyQXr1Xnv30pHls5Zvr
+j8IFAxpQ6sSw9CEI11uAhBx/CZUYSosHy36njUOsoLU8Muu0r6GruU8zDPmo47Qj
+q4tq3GVi/BgFds+vSMMHyom8gmTLK82WuETF/CPIkrdIIkpt9zTCRTzkeRF1U9LE
+33PHKWsPji3wAjt0KrSArnRTGDI9qEJDU0rtouT1d5GIN8nzUJw8Np/GTPQ/SNR9
+nyxPhevEzCCXGxBDf6cYjQpqMJuqGUmHhq8MzhuyAAXVOB5L0eirdPE+bczWNHrM
+xcVZr7Ofb6bJQYWy2FG0VWz28wFnhw75v9fEdPpyDAhMsn9TU/g15Shh72Hy+MGM
+G4X3iC5fdmnXjOz3Ig3cNIMFTyIgNL0RMUZEyoXJ4AC8KrulQnAPgxFORvHjmRzS
+UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
+9P1MogqpjoOuCKjEqXKwqGBexsLkxSgQXbDUnuNcvTaE
+=Lxf/
+-----END PGP MESSAGE-----
+* Blogging 
+- ox-hugo, easy-hugo, org2blog
+- *hugo supports org syntax naively*, so I just use that.
+* Journaling
+** org-journal                                                      :ATTACH:
+:PROPERTIES:
+:ID:       949d28e2-18db-480b-b48a-3dd7bc6c318f
+:Attachments: Screenshot_20190724_154046_2019-07-24_15-41-05.png
+:END:
+
+#+CAPTION: calendar colors days that have journal entries
+#+DOWNLOADED: file:///tmp/Spectacle.jWjoFC/Screenshot_20190724_154046.png @ 2019-07-24 15:41:06
+
+[[file:data/94/9d28e2-18db-480b-b48a-3dd7bc6c318f/Screenshot_20190724_154046_2019-07-24_15-41-05.png]]
+*** Stored one file per day 
+
+#+BEGIN_SRC sh :exports both
+  ls ~/org/journal | grep -P "2019-0[345]" | head -n 5
+#+END_SRC
+
+#+RESULTS:
+| 2019-03-03 |
+| 2019-03-06 |
+| 2019-03-11 |
+| 2019-03-12 |
+| 2019-03-14 |
+
+* Presentations
+- org-reveal, *org-re-reveal*, ox-reveal, [[https://github.com/lorniu/ox-spectacle][ox-spectacle]], org-treeslide, beamer
+* Task Management/Calendaring                                        :ATTACH:
+:PROPERTIES:
+:ID:       7ff90f9e-cbaa-406c-b881-ed63784c26f7
+:Attachments: screenshot_2019-07-24_15-57-40.png
+:END:
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-07-24 15:57:45
+[[file:data/7f/f90f9e-cbaa-406c-b881-ed63784c26f7/screenshot_2019-07-24_15-57-40.png]]
+
