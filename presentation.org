@@ -276,6 +276,66 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 
 * Presentations
 - org-reveal, *org-re-reveal*, ox-reveal, [[https://github.com/lorniu/ox-spectacle][ox-spectacle]], org-treeslide, beamer
+* Tables/Spreadsheets
+
+
+#+CAPTION: @>$2=vmin(@2..@-1)::@>$3=vmax(@2..@-1)::@>$4=vmean(@2..@-1)::@>$5=vsum(@2..@-1)
+|----------+-----------+------------+------+-----|
+| Item     | Low Value | High Value | Mean | Sum |
+|----------+-----------+------------+------+-----|
+| Hammer   |        10 |         20 |   10 |  11 |
+| Axe      |        20 |         25 |   30 |  13 |
+|----------+-----------+------------+------+-----|
+| *Total:* |        10 |         25 |   20 |  24 |
+|----------+-----------+------------+------+-----|
+#+TBLFM: @>$2=vmin(@2..@-1)::@>$3=vmax(@2..@-1)::@>$4=vmean(@2..@-1)::@>$5=vsum(@2..@-1)
+
+- Each formula is separated with =::=
+- =@= indicates the ROW (=@>= means *last row*)
+- =$= indicates the COLUMN
+
+** Referencing cells by name
+
+#+CAPTION: $l=vmin(@2..@-1)::$h=vmax(@2..@-1)::$m=vmean(@2..@-1)::$s=vsum(@2..@-1)
+|-----------+-----------+------------+------+-----|
+| Item      | Low Value | High Value | Mean | Sum |
+|-----------+-----------+------------+------+-----|
+| Hammer    |        10 |         20 |   10 |  10 |
+| Axe       |        20 |         25 |   30 |  13 |
+|-----------+-----------+------------+------+-----|
+| *^Total:* |        10 |         25 |   20 |  23 |
+| ^         |         l |          h |    m |   s |
+|-----------+-----------+------------+------+-----|
+#+TBLFM: $l=vmin(@2..@-1)::$h=vmax(@2..@-1)::$m=vmean(@2..@-1)::$s=vsum(@2..@-1)
+
+- =^= indicates field values on this line define names for the field ABOVE this row
+
+** Referencing cells in other tables
+
+#+Name: MyDataGenerator
+#+BEGIN_SRC shell :exports none :results table
+  echo 4
+#+END_SRC
+
+#+RESULTS: MyDataGenerator
+| 4 |
+
+Simply tab through the remote references
+
+#+BEGIN_EXAMPLE
+#+Name: Example refereincing remote data
+|                                   | Core                            |
+| Value returned by MyDataGenerator | :=remote(MyDataGenerator,@>$0); |
+#+END_EXAMPLE
+
+#+Name: Example refereincing remote data
+|                                   | Core |
+| Value returned by MyDataGenerator |    4 |
+#+TBLFM: @2$2=remote(MyDataGenerator,@>$0);
+
+Also you can "convert" a table. I dunno what that actually means, but it seems
+to change the way you can interact with tables. Insertion point on the table, =, t c=.
+
 * Task Management/Calendaring                                        :ATTACH:
 :PROPERTIES:
 :ID:       7ff90f9e-cbaa-406c-b881-ed63784c26f7
