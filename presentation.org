@@ -57,13 +57,12 @@
 #+END_NOTES
 
 ** What is it for?
-- task manager/planner
-- authoring/outlining documents
-- keeping notes, maintaining todo lists, planning projects
 :PROPERTIES:
 :ID:       f69170b3-8d72-439d-b3b7-6f0358fb361b
 :END:
-
+- task manager/planner
+- authoring/outlining documents
+- keeping notes, maintaining todo lists, planning projects
 ** Things I do, what interests you?
 
 - Worklog/Literate Ops
