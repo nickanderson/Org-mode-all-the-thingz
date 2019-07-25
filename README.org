@@ -1,0 +1,7 @@
+#+TITLE: Org-mode all the thingz!
+
+#+CAPTION: built with Spacemacs
+[[http://i.imgur.com/tXSoThF.png]]
+
+To export the presentation with reveal.js, open [[file:presentation.org][presentation.org]] and run
+~org-re-reveal-export-to-html~.
