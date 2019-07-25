@@ -280,3 +280,13 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2019-07-24 15:57:45
 [[file:data/7f/f90f9e-cbaa-406c-b881-ed63784c26f7/screenshot_2019-07-24_15-57-40.png]]
+** Keep agenda top of mind                                          :ATTACH:
+:PROPERTIES:
+:ID:       cdfddef3-766c-420e-bf3b-c6f2e09cd43b
+:Attachments: idle-org-agenda_2019-07-25_12-52-30.gif
+:END:
+
+- [[https://github.com/enisozgen/idle-org-agenda][idle-org-agenda]]
+
+#+DOWNLOADED: https://github.com/enisozgen/idle-org-agenda/blob/master/docs/idle-org-agenda.gif @ 2019-07-25 12:52:30
+[[file:data/cd/fddef3-766c-420e-bf3b-c6f2e09cd43b/idle-org-agenda_2019-07-25_12-52-30.gif]]
