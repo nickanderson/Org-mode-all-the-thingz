@@ -1,4 +1,4 @@
-#+Title: Org-mode all the thingz
+#+Title: Org-mode all the thingz!
 #+Author: Nick Anderson
 #+Email: nick@cmdln.org
 #+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t
@@ -14,9 +14,9 @@
 #+REVEAL_THEME: night
 # This flattens up to x levels deep
 #+REVEAL_HLEVEL: 1
-#+REVEAL_HEAD_PREAMBLE: <meta name=description" content=CFEngine Zero to Hero Primer.">
+#+REVEAL_HEAD_PREAMBLE: <meta name=description" content=Org-mode all the thingz!">
 #+REVEAL_POSTAMBLE: <p> Created by Nick Anderson. </p>
-#+REVEAL_PLUGINS: (markdown notes)
+#+REVEAL_PLUGINS: (notes)
 #+REVEAL_EXTRA_CSS: ./local.css
 
 #+DOWNLOADED: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Org-mode-unicorn.svg/800px-Org-mode-unicorn.svg.png @ 2019-07-19 16:43:44
