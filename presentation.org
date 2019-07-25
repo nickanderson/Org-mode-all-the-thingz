@@ -22,7 +22,6 @@
 #+REVEAL_HEAD_PREAMBLE: <meta name=description" content=Org-mode all the thingz!">
 #+REVEAL_POSTAMBLE: <p> Created by Nick Anderson. </p>
 #+REVEAL_PLUGINS: (notes)
-#+REVEAL_EXTRA_CSS: ./local.css
 #+OPTIONS: reveal_single_file:t
 
 #+DOWNLOADED: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Org-mode-unicorn.svg/800px-Org-mode-unicorn.svg.png @ 2019-07-19 16:43:44
