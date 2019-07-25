@@ -5,3 +5,6 @@
 
 To export the presentation with reveal.js, open [[file:presentation.org][presentation.org]] and run
 ~org-re-reveal-export-to-html~.
+
+[[https://htmlpreview.github.io/?https://github.com/nickanderson/Org-mode-all-the-thingz/blob/master/presentation.org][View presentation]].
+
