@@ -25,22 +25,40 @@
 :ID:       bb93dd07-28b1-405c-91c6-413a49d649e9
 :REVEAL_BACKGROUND: ./data/bb/93dd07-28b1-405c-91c6-413a49d649e9/800px-Org-mode-unicorn.svg_2019-07-19_16-43-44.png
 :REVEAL_BACKGROUND_OPACITY: 0.5
-:REVEAL_BACKGROUND_SIZE: 800px 
+:REVEAL_BACKGROUND_SIZE: 800px
 :Attachments: 800px-Org-mode-unicorn.svg_2019-07-19_16-43-44.png
 :END:
 
 ** What is it?
+- around since 2003
 - markup language
 - best supported in emacs
 - system for managing plain text
 
+*** An aside for non emacs users
+
+- [[https://github.com/axvr/org.vim][org.vim]], [[https://github.com/jceb/vim-orgmode][vim-orgmode]], [[https://packagecontrol.io/packages/orgmode][org-mode for Sublime Text 2 & 3]], [[https://github.com/vscode-org-mode/vscode-org-mode][vscode-org-mode]], [[https://atom.io/packages/org-mode][Atom grammar for org-mode syntax]]
+- [[https://spacemacs.org][spacemacs]], [[https://github.com/hlissner/doom-emacs][doom-emacs]]
+
+#+BEGIN_NOTES
+  - I think it was 2005 when I first tried org-mode.
+  - I was already a vim user, i couldn't figure out how to quit emacs
+  - I couldn't manage to get any vi like keybindings working well and it didnt stick
+  - Around 2013 I tried again, i still didn't get vim keybindings working, but i lerned enough emacs for org-mode and stuck with it for months before my usage faded
+  - By 2014 I finally managed to get evil-mode working pretty well and was all in on org-mode
+  - And in 2015 I tried spacemacs.
+  - I was comfortable within weeks, and within months I was completely converted
+  - In 2017 I released ob-cfengine3
+#+END_NOTES
+
 ** What is it for?
-:PROPERTIES:
-:ID:       f69170b3-8d72-439d-b3b7-6f0358fb361b
-:END:
 - task manager/planner
 - authoring/outlining documents
 - keeping notes, maintaining todo lists, planning projects
+:PROPERTIES:
+:ID:       f69170b3-8d72-439d-b3b7-6f0358fb361b
+:END:
+
 ** Things I do, what interests you?
 
 - Worklog/Literate Ops
@@ -65,7 +83,7 @@
   - org-reveal, org-re-reveal
   - ox-reveal, ox-
 - Task management/Calendaring
-  - Agenda  
+  - Agenda
   - org-cal-dav
 - Contact management
 - Executing code
@@ -175,7 +193,7 @@ Diagrams /flow charts
   - org-jira :: Modify tickets directly within org-mode or quickly jump to an
                 issue in the web ui
 #+END_NOTES
-* Notes 
+* Notes
 ** Deft                                                             :ATTACH:
 :PROPERTIES:
 :ID:       c96d3588-2eaa-4fbc-961e-20921c5960d4
@@ -186,7 +204,7 @@ Diagrams /flow charts
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2019-07-24 15:29:36
 [[file:data/c9/6d3588-2eaa-4fbc-961e-20921c5960d4/screenshot_2019-07-24_15-29-32.png]]
-* Email 
+* Email
 
 mu4e, notmuch, org-mime-htmlize
 ** mu4e                                                             :ATTACH:
@@ -207,7 +225,7 @@ mu4e, notmuch, org-mime-htmlize
 * Keeping Secrets
 - Tag entries with =crypt= to automatically encrypt sections of a file with GPG
 - ~org-decrypt-entry~
-** For my eyes only :crypt: 
+** For my eyes only :crypt:
 -----BEGIN PGP MESSAGE-----
 
 hQIMA/jYNcPWXvJ6ARAAygauqE6m4hK1h2LX/P43L1kXoaVyIdpge9RKFbejEDho
@@ -225,7 +243,7 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 9P1MogqpjoOuCKjEqXKwqGBexsLkxSgQXbDUnuNcvTaE
 =Lxf/
 -----END PGP MESSAGE-----
-* Blogging 
+* Blogging
 - ox-hugo, easy-hugo, org2blog
 - *hugo supports org syntax naively*, so I just use that.
 * Journaling
@@ -239,7 +257,7 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 #+DOWNLOADED: file:///tmp/Spectacle.jWjoFC/Screenshot_20190724_154046.png @ 2019-07-24 15:41:06
 
 [[file:data/94/9d28e2-18db-480b-b48a-3dd7bc6c318f/Screenshot_20190724_154046_2019-07-24_15-41-05.png]]
-*** Stored one file per day 
+*** Stored one file per day
 
 #+BEGIN_SRC sh :exports both
   ls ~/org/journal | grep -P "2019-0[345]" | head -n 5
@@ -262,4 +280,3 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2019-07-24 15:57:45
 [[file:data/7f/f90f9e-cbaa-406c-b881-ed63784c26f7/screenshot_2019-07-24_15-57-40.png]]
-
