@@ -29,15 +29,16 @@
 <div class="reveal">
 <div class="slides">
 <section id="sec-title-slide">
-<h1 class="title">Org-mode all the thingz</h1><h2 class="author">Nick Anderson</h2><p class="date">Created: 2019-07-24 Wed 16:11</p>
+<h1 class="title">Org-mode all the thingz</h1><h2 class="author">Nick Anderson</h2><p class="date">Created: 2019-07-25 Thu 13:02</p>
 </section>
 <section>
-<section id="slide-org6c9ac53" data-background="./data/bb/93dd07-28b1-405c-91c6-413a49d649e9/800px-Org-mode-unicorn.svg_2019-07-19_16-43-44.png" data-background-size="800px">
-<h2 id="org6c9ac53">org-mode</h2>
+<section id="slide-org7ffce50" data-background="./data/bb/93dd07-28b1-405c-91c6-413a49d649e9/800px-Org-mode-unicorn.svg_2019-07-19_16-43-44.png" data-background-size="800px">
+<h2 id="org7ffce50">org-mode</h2>
 </section>
-<section id="slide-orgb9a7a9d">
-<h3 id="orgb9a7a9d">What is it?</h3>
+<section id="slide-org67476ab">
+<h3 id="org67476ab">What is it?</h3>
 <ul>
+<li>around since 2003</li>
 <li>markup language</li>
 <li>best supported in emacs</li>
 <li>system for managing plain text</li>
@@ -45,17 +46,45 @@
 </ul>
 
 </section>
-<section id="slide-orgc4c0563">
-<h3 id="orgc4c0563">What is it for?</h3>
+<section id="slide-org897d278">
+<h4 id="org897d278">An aside for non emacs users</h4>
+<ul>
+<li><a href="https://github.com/axvr/org.vim">org.vim</a>, <a href="https://github.com/jceb/vim-orgmode">vim-orgmode</a>, <a href="https://packagecontrol.io/packages/orgmode">org-mode for Sublime Text 2 &amp; 3</a>, <a href="https://github.com/vscode-org-mode/vscode-org-mode">vscode-org-mode</a>, <a href="https://atom.io/packages/org-mode">Atom grammar for org-mode syntax</a></li>
+<li><a href="https://spacemacs.org">spacemacs</a>, <a href="https://github.com/hlissner/doom-emacs">doom-emacs</a></li>
+
+</ul>
+
+<aside class="notes">
+<ul>
+<li>I think it was 2005 when I first tried org-mode.</li>
+<li>I was already a vim user, i couldn't figure out how to quit emacs</li>
+<li>I couldn't manage to get any vi like keybindings working well and it didnt stick</li>
+<li>Around 2013 I tried again, i still didn't get vim keybindings working, but i lerned enough emacs for org-mode and stuck with it for months before my usage faded</li>
+<li>By 2014 I finally managed to get evil-mode working pretty well and was all in on org-mode</li>
+<li>And in 2015 I tried spacemacs.</li>
+<li>I was comfortable within weeks, and within months I was completely converted</li>
+<li>In 2017 I released ob-cfengine3</li>
+
+</ul>
+
+</aside>
+
+</section>
+<section id="slide-org3cf3bfd">
+<h3 id="org3cf3bfd">What is it for?</h3>
 <ul>
 <li>task manager/planner</li>
 <li>authoring/outlining documents</li>
 <li>keeping notes, maintaining todo lists, planning projects</li>
 
 </ul>
+<p>
+:ID:       f69170b3-8d72-439d-b3b7-6f0358fb361b
+</p>
+
 </section>
-<section id="slide-orgaf7062a">
-<h3 id="orgaf7062a">Things I do, what interests you?</h3>
+<section id="slide-org33c2fc9">
+<h3 id="org33c2fc9">Things I do, what interests you?</h3>
 <ul>
 <li>Worklog/Literate Ops
 <ul>
@@ -165,13 +194,13 @@ Diagrams /flow charts
 </section>
 </section>
 <section>
-<section id="slide-orgf9514b3">
-<h2 id="orgf9514b3">Worklog/Literate Ops</h2>
-<div class="outline-text-2" id="text-orgf9514b3">
+<section id="slide-orga7694ad">
+<h2 id="orga7694ad">Worklog/Literate Ops</h2>
+<div class="outline-text-2" id="text-orga7694ad">
 </div>
 </section>
-<section id="slide-orge429390">
-<h3 id="orge429390">org-capture</h3>
+<section id="slide-orge3a2879">
+<h3 id="orge3a2879">org-capture</h3>
 
 <div class="figure">
 <p><img src="data/24/700353-3d1f-4b94-ac5b-246959ef426f/Screenshot_20190724_141502_2019-07-24_14-15-31.png" alt="Screenshot_20190724_141502_2019-07-24_14-15-31.png" />
@@ -188,8 +217,8 @@ mistake. Since I should fix that (just not now), I quickly start org-capture
 </aside>
 
 </section>
-<section id="slide-org7fba2b7">
-<h4 id="org7fba2b7">org-capture supports a nested menu</h4>
+<section id="slide-orgaa10364">
+<h4 id="orgaa10364">org-capture supports a nested menu</h4>
 
 <div class="figure">
 <p><img src="data/e1/b4ffc3-d90b-4db1-8e0b-7330f16a70f0/Screenshot_20190724_141639_2019-07-24_14-16-45.png" alt="Screenshot_20190724_141639_2019-07-24_14-16-45.png" />
@@ -197,16 +226,16 @@ mistake. Since I should fix that (just not now), I quickly start org-capture
 </div>
 
 </section>
-<section id="slide-org5d52fb3">
-<h3 id="org5d52fb3">Time Tracking</h3>
+<section id="slide-orga448fbc">
+<h3 id="orga448fbc">Time Tracking</h3>
 <ul>
 <li><code>org-clock-in</code>, <code>org-clock-out</code>, <code>org-clock-goto</code>, <code>org-clock-report</code>, <code>org-clock-resolve-clocks</code></li>
 
 </ul>
 
 </section>
-<section id="slide-org3ce2ff8">
-<h4 id="org3ce2ff8">Clocking in and out of tasks</h4>
+<section id="slide-org2282923">
+<h4 id="org2282923">Clocking in and out of tasks</h4>
 
 <div class="figure">
 <p><img src="data/89/370a5e-e413-4d19-9a03-a487e32ae9a8/Screenshot_20190724_142033_2019-07-24_14-20-42.png" alt="Screenshot_20190724_142033_2019-07-24_14-20-42.png" />
@@ -214,8 +243,8 @@ mistake. Since I should fix that (just not now), I quickly start org-capture
 </div>
 
 </section>
-<section id="slide-org3901183">
-<h4 id="org3901183">Clock Reports</h4>
+<section id="slide-orgd56ad1b">
+<h4 id="orgd56ad1b">Clock Reports</h4>
 
 <div class="figure">
 <p><img src="data/89/370a5e-e413-4d19-9a03-a487e32ae9a8/Screenshot_20190724_141926_2019-07-24_14-20-07.png" alt="Screenshot_20190724_141926_2019-07-24_14-20-07.png" />
@@ -223,8 +252,8 @@ mistake. Since I should fix that (just not now), I quickly start org-capture
 </div>
 
 </section>
-<section id="slide-org5126013">
-<h3 id="org5126013">Screenshot/Cast</h3>
+<section id="slide-orga37472b">
+<h3 id="orga37472b">Screenshot/Cast</h3>
 <dl>
 <dt><code>org-download</code></dt><dd><code>org-download-screenshot</code>, drag and drop,</dd>
 <dt><code>camcorder</code></dt><dd>start and stop screen recording, convert to gif</dd>
@@ -237,8 +266,8 @@ While working on graphical user interfaces, it can be helpful to quickly pull sc
 
 </aside>
 </section>
-<section id="slide-org28adb45">
-<h3 id="org28adb45">Jira</h3>
+<section id="slide-org8741844">
+<h3 id="org8741844">Jira</h3>
 
 <div class="figure">
 <p><img src="data/91/8b2587-dafd-4bce-bd7d-0dce9866a465/dos-jira-logo_2019-07-24_15-17-28.png" alt="dos-jira-logo_2019-07-24_15-17-28.png" />
@@ -261,13 +290,13 @@ issue in the web ui</dd>
 </section>
 </section>
 <section>
-<section id="slide-org64c485a">
-<h2 id="org64c485a">Notes</h2>
-<div class="outline-text-2" id="text-org64c485a">
+<section id="slide-orgdc8cddd">
+<h2 id="orgdc8cddd">Notes</h2>
+<div class="outline-text-2" id="text-orgdc8cddd">
 </div>
 </section>
-<section id="slide-orgebe8b3e">
-<h3 id="orgebe8b3e">Deft</h3>
+<section id="slide-org8d4877a">
+<h3 id="org8d4877a">Deft</h3>
 <ul>
 <li>For one file per note organization (kind of like Evernote)</li>
 
@@ -281,14 +310,14 @@ issue in the web ui</dd>
 </section>
 </section>
 <section>
-<section id="slide-orgbf57905">
-<h2 id="orgbf57905">Email</h2>
+<section id="slide-org10ba1b5">
+<h2 id="org10ba1b5">Email</h2>
 <p>
 mu4e, notmuch, org-mime-htmlize
 </p>
 </section>
-<section id="slide-org7d270ab">
-<h3 id="org7d270ab">mu4e</h3>
+<section id="slide-org561ffdb">
+<h3 id="org561ffdb">mu4e</h3>
 
 <div class="figure">
 <p><img src="data/f7/f826c5-78c1-4c1f-8d4c-6993a88bfb2f/Screenshot_20190724_153130_2019-07-24_15-31-48.png" alt="Screenshot_20190724_153130_2019-07-24_15-31-48.png" />
@@ -308,16 +337,16 @@ mu4e, notmuch, org-mime-htmlize
 </section>
 </section>
 <section>
-<section id="slide-orgbbc144d">
-<h2 id="orgbbc144d">Keeping Secrets</h2>
+<section id="slide-org3096f2c">
+<h2 id="org3096f2c">Keeping Secrets</h2>
 <ul>
 <li>Tag entries with <code>crypt</code> to automatically encrypt sections of a file with GPG</li>
 <li><code>org-decrypt-entry</code></li>
 
 </ul>
 </section>
-<section id="slide-org43358c4">
-<h3 id="org43358c4">For my eyes only</h3>
+<section id="slide-orgebb3150">
+<h3 id="orgebb3150">For my eyes only</h3>
 <p>
 &#x2013;&#x2014;BEGIN PGP MESSAGE&#x2013;&#x2014;
 </p>
@@ -342,8 +371,8 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 </section>
 </section>
 <section>
-<section id="slide-orgb950ec4">
-<h2 id="orgb950ec4">Blogging</h2>
+<section id="slide-orgb51436a">
+<h2 id="orgb51436a">Blogging</h2>
 <ul>
 <li>ox-hugo, easy-hugo, org2blog</li>
 <li><b>hugo supports org syntax naively</b>, so I just use that.</li>
@@ -352,21 +381,21 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 </section>
 </section>
 <section>
-<section id="slide-org54debb5">
-<h2 id="org54debb5">Journaling</h2>
-<div class="outline-text-2" id="text-org54debb5">
+<section id="slide-org41ccd5d">
+<h2 id="org41ccd5d">Journaling</h2>
+<div class="outline-text-2" id="text-org41ccd5d">
 </div>
 </section>
-<section id="slide-org7a10fcf">
-<h3 id="org7a10fcf">org-journal</h3>
+<section id="slide-org45a6095">
+<h3 id="org45a6095">org-journal</h3>
 
 <div class="figure">
 <p><img src="data/94/9d28e2-18db-480b-b48a-3dd7bc6c318f/Screenshot_20190724_154046_2019-07-24_15-41-05.png" alt="Screenshot_20190724_154046_2019-07-24_15-41-05.png" />
 </p>
 </div>
 </section>
-<section id="slide-org631328f">
-<h4 id="org631328f">Stored one file per day</h4>
+<section id="slide-org42bdab7">
+<h4 id="org42bdab7">Stored one file per day</h4>
 <div class="org-src-container">
 
 <pre  class="src src-sh">ls ~/org/journal | grep -P <span style="color: #b8bb26;">"2019-0[345]"</span> | head -n <span style="color: #d3869b;">5</span>
@@ -405,8 +434,8 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 </section>
 </section>
 <section>
-<section id="slide-org3dd845b">
-<h2 id="org3dd845b">Presentations</h2>
+<section id="slide-org0f3615b">
+<h2 id="org0f3615b">Presentations</h2>
 <ul>
 <li>org-reveal, <b>org-re-reveal</b>, ox-reveal, <a href="https://github.com/lorniu/ox-spectacle">ox-spectacle</a>, org-treeslide, beamer</li>
 
@@ -414,11 +443,24 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 </section>
 </section>
 <section>
-<section id="slide-org1b351cd">
-<h2 id="org1b351cd">Task Management/Calendaring</h2>
+<section id="slide-orgabc5d34">
+<h2 id="orgabc5d34">Task Management/Calendaring</h2>
 
 <div class="figure">
 <p><img src="data/7f/f90f9e-cbaa-406c-b881-ed63784c26f7/screenshot_2019-07-24_15-57-40.png" alt="screenshot_2019-07-24_15-57-40.png" />
+</p>
+</div>
+</section>
+<section id="slide-org7b9bda3">
+<h3 id="org7b9bda3">Keep agenda top of mind</h3>
+<ul>
+<li><a href="https://github.com/enisozgen/idle-org-agenda">idle-org-agenda</a></li>
+
+</ul>
+
+
+<div class="figure">
+<p><img src="data/cd/fddef3-766c-420e-bf3b-c6f2e09cd43b/idle-org-agenda_2019-07-25_12-52-30.gif" alt="idle-org-agenda_2019-07-25_12-52-30.gif" />
 </p>
 </div>
 </section>
