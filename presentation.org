@@ -269,7 +269,8 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2019-07-24 15:29:36
 [[file:data/c9/6d3588-2eaa-4fbc-961e-20921c5960d4/screenshot_2019-07-24_15-29-32.png]]
-** Code blocks
+
+* Code blocks
 
 #+BEGIN_NOTES
   - Literate Programming
@@ -277,7 +278,7 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   - Jupyter notebook
 #+END_NOTES
 
-*** CFEngine
+** CFEngine
 
 #+BEGIN_SRC org
   ,#+NAME:CFEngine-hello-world
@@ -289,7 +290,7 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   : R: CFEngine says "Hello, World!"
 #+END_SRC
 
-*** Python
+** Python
 
 #+BEGIN_SRC org
   ,#+BEGIN_SRC python :results output
@@ -300,7 +301,7 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   : Python says "Hello, World!"
 #+END_SRC
 
-*** Shell
+** Shell
 
 #+BEGIN_SRC org
   ,#+BEGIN_SRC sh :results output
@@ -311,7 +312,7 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   : /usr/bin/zsh says "Hello, World!"
 #+END_SRC
 
-*** Reusing results
+** Reusing results
 
 #+BEGIN_SRC org
   ,#+BEGIN_SRC sh :results output :var INPUT=CFEngine-hello-world
@@ -323,7 +324,7 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   : 
 #+END_SRC
 
-*** Remote execution
+** Remote execution
 
 #+BEGIN_SRC  org
   ,#+CAPTION: SQL in org-mode SRC block
@@ -341,8 +342,68 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   - dir
   - tangle
 #+END_NOTES
-** Exports
-*** HTML Theme Readtheorg
+
+** Diagrams
+
+#+RESULTS: MPF-policy-execution-high-level-diagram
+[[file:MPF-policy-execution-high-level.png]]
+
+*** PlantUML Source 
+
+#+NAME: MPF-policy-execution-high-level-diagram
+#+begin_src plantuml :file MPF-policy-execution-high-level.png
+  title High Level MPF Policy Execution Sequence
+
+  create "cf-execd"
+  loop "Check ""body executor control schedule"""
+    note left of "cf-execd"
+      cf-execd checks the schedule once a minute, but the default schedule results
+      in execution once every 5 minutes.
+    end note
+
+    alt "At least one element evaluates true"
+      create "cf-agent -f update.cf"
+      "cf-execd"->"cf-agent -f update.cf": Update Policy Execution
+      alt """masterfiles/cf_promises_validated"" differs\nfrom ""intputs/cf_promises_validated"""
+        note over "cf-agent -f update.cf"
+          Copy masterfiles to inputs
+        end note
+      end
+      note over "cf-agent -f update.cf"
+        Execute bundles from Augments listed in
+        ""vars.common_control_update_bundlesequence_end""
+      end note
+
+      destroy "cf-agent -f update.cf"
+      create "cf-agent -f promises.cf"
+      "cf-execd"->"cf-agent -f promises.cf": Normal Policy Execution
+      note over "cf-agent -f promises.cf"
+        Resolve inventory (inventory/*.cf)
+      end note
+      note over "cf-agent -f promises.cf"
+        Resolve bundle common def (controls/def.cf)
+      end note
+      alt "services_autorun defined"
+        note over "cf-agent -f promises.cf"
+          Execute bundles tagged autorun in lexical order
+        end note
+      end
+      note over "cf-agent -f promises.cf"
+        Execute custom policy integrated into
+        ""servies/main.cf""
+      end note
+      note over "cf-agent -f promises.cf"
+        Execute bundles from Augments listed in
+        ""vars.common_control_bundlesequence_end""
+      end note
+      destroy "cf-agent -f promises.cf"
+    end
+    ... 1 minute ...
+  end
+#+end_src
+
+* Exporting
+** HTML Theme Readtheorg
 :PROPERTIES:
 :ID:       ca042dbe-ca4b-47b3-a8c6-533a5147330f
 :Attachments: readtheorg_2019-08-01_14-53-27.png readtheorg_2019-08-01_14-53-43.png
@@ -351,7 +412,7 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
 #+DOWNLOADED: https://github.com/fniessen/org-html-themes/blob/master/readtheorg.png?raw=true @ 2019-08-01 14:53:46
 [[file:data/ca/042dbe-ca4b-47b3-a8c6-533a5147330f/readtheorg_2019-08-01_14-53-43.png]]
 
-*** HTML Theme BigBlow                                             :ATTACH:
+** HTML Theme BigBlow                                               :ATTACH:
 :PROPERTIES:
 :ID:       ebd1e5f2-63c0-47b1-80c2-e9db267fc3b1
 :Attachments: bigblow_2019-08-01_14-54-44.png
@@ -360,7 +421,7 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
 #+DOWNLOADED: https://github.com/fniessen/org-html-themes/blob/master/bigblow.png?raw=true @ 2019-08-01 14:54:47
 [[file:data/eb/d1e5f2-63c0-47b1-80c2-e9db267fc3b1/bigblow_2019-08-01_14-54-44.png]]
 
-*** PDF                                                            :ATTACH:
+** PDF                                                              :ATTACH:
 :PROPERTIES:
 :ID:       61454799-4f5f-4753-b159-83400115a18c
 :Attachments: finished-styled-spec-pdf_2019-08-01_15-15-31.png
@@ -457,21 +518,30 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 
 * Tables/Spreadsheets
 
-
 #+CAPTION: @>$2=vmin(@2..@-1)::@>$3=vmax(@2..@-1)::@>$4=vmean(@2..@-1)::@>$5=vsum(@2..@-1)
 |----------+-----------+------------+------+-----|
 | Item     | Low Value | High Value | Mean | Sum |
 |----------+-----------+------------+------+-----|
-| Hammer   |        10 |         20 |   10 |  11 |
+| Hammer   |         1 |        100 |   10 |  11 |
+| More     |         3 |        200 |   11 |   8 |
 | Axe      |        20 |         25 |   30 |  13 |
 |----------+-----------+------------+------+-----|
-| *Total:* |        10 |         25 |   20 |  24 |
+| *Total:* |         1 |        200 |   17 |  32 |
 |----------+-----------+------------+------+-----|
 #+TBLFM: @>$2=vmin(@2..@-1)::@>$3=vmax(@2..@-1)::@>$4=vmean(@2..@-1)::@>$5=vsum(@2..@-1)
 
 - Each formula is separated with =::=
 - =@= indicates the ROW (=@>= means *last row*)
 - =$= indicates the COLUMN
+
+** Live action                                                      :ATTACH:
+:PROPERTIES:
+:ID:       eea4d055-4294-46da-bbb3-572e573365b5
+:Attachments: org-mode-demo-tables-2019-08-01_16.15.41_2019-08-01_16-18-36.gif
+:END:
+
+#+DOWNLOADED: file:///home/nickanderson/Videos/screencasts/org-mode-demo-tables-2019-08-01_16.15.41.gif @ 2019-08-01 16:18:40
+[[file:data/ee/a4d055-4294-46da-bbb3-572e573365b5/org-mode-demo-tables-2019-08-01_16.15.41_2019-08-01_16-18-36.gif]]
 
 ** Referencing cells by name
 
@@ -488,32 +558,6 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 #+TBLFM: $l=vmin(@2..@-1)::$h=vmax(@2..@-1)::$m=vmean(@2..@-1)::$s=vsum(@2..@-1)
 
 - =^= indicates field values on this line define names for the field ABOVE this row
-
-** Referencing cells in other tables
-
-#+Name: MyDataGenerator
-#+BEGIN_SRC shell :exports none :results table
-  echo 4
-#+END_SRC
-
-#+RESULTS: MyDataGenerator
-| 4 |
-
-Simply tab through the remote references
-
-#+BEGIN_EXAMPLE
-#+Name: Example refereincing remote data
-|                                   | Core                            |
-| Value returned by MyDataGenerator | :=remote(MyDataGenerator,@>$0); |
-#+END_EXAMPLE
-
-#+Name: Example refereincing remote data
-|                                   | Core |
-| Value returned by MyDataGenerator |    4 |
-#+TBLFM: @2$2=remote(MyDataGenerator,@>$0);
-
-Also you can "convert" a table. I dunno what that actually means, but it seems
-to change the way you can interact with tables. Insertion point on the table, =, t c=.
 
 * Task Management/Calendaring                                        :ATTACH:
 :PROPERTIES:
