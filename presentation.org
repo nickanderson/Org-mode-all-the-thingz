@@ -268,6 +268,79 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2019-07-24 15:29:36
 [[file:data/c9/6d3588-2eaa-4fbc-961e-20921c5960d4/screenshot_2019-07-24_15-29-32.png]]
+** Code blocks
+
+#+BEGIN_NOTES
+  - Literate Programming
+  - Reproducible research
+  - Jupyter notebook
+#+END_NOTE
+
+*** CFEngine
+
+#+BEGIN_SRC org
+  ,#+NAME:CFEngine-hello-world
+  ,#+BEGIN_SRC cfengine3 :include-stdlib t :log-level info :exports both :run-with-main t
+    reports: 'CFEngine says "Hello, World!"'; 
+  ,#+END_SRC
+
+  ,#+RESULTS: CFEngine-hello-world
+  : R: CFEngine says "Hello, World!"
+#+END_SRC
+
+*** Python
+
+#+BEGIN_SRC org
+  ,#+BEGIN_SRC python :results output
+    print("Python says \"Hello, World!\"") 
+  ,#+END_SRC
+
+  ,#+RESULTS:
+  : Python says "Hello, World!"
+#+END_SRC
+
+*** Shell
+
+#+BEGIN_SRC org
+  ,#+BEGIN_SRC sh :results output
+    echo "$SHELL says \"Hello, World!\"" 
+  ,#+END_SRC
+
+  ,#+RESULTS:
+  : /usr/bin/zsh says "Hello, World!"
+#+END_SRC
+
+*** Reusing results
+
+#+BEGIN_SRC org
+  ,#+BEGIN_SRC sh :results output :var INPUT=CFEngine-hello-world
+    echo "$INPUT" 
+  ,#+END_SRC
+
+  ,#+RESULTS:
+  : R: CFEngine says "Hello, World!"
+  : 
+#+END_SRC
+
+*** Remote execution
+
+#+BEGIN_SRC  org
+  ,#+CAPTION: SQL in org-mode SRC block
+  ,#+BEGIN_SRC sql :exports both :dir /ssh:user@remote: :engine postgresql :database cfdb
+    SELECT firstreporttimestamp from __hosts limit 1
+  ,#+END_SRC
+
+  ,#+RESULTS:
+  | firstreporttimestamp         |
+  |------------------------------|
+  | 2019-02-15 19:49:57.74915+00 |
+#+END_SRC
+
+#+BEGIN_NOTES
+  - dir
+  - tangle
+#+END_NOTES
+
 * Email
 
 - [[https://www.djcbsoftware.nl/code/mu/mu4e.html][mu4e]], [[https://notmuchmail.org/notmuch-emacs/][notmuch]], [[https://github.com/org-mime/org-mime][org-mime]]
