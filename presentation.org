@@ -270,7 +270,8 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
 [[file:data/c9/6d3588-2eaa-4fbc-961e-20921c5960d4/screenshot_2019-07-24_15-29-32.png]]
 * Email
 
-mu4e, notmuch, org-mime-htmlize
+- [[https://www.djcbsoftware.nl/code/mu/mu4e.html][mu4e]], [[https://notmuchmail.org/notmuch-emacs/][notmuch]], [[https://github.com/org-mime/org-mime][org-mime]]
+
 ** mu4e                                                             :ATTACH:
 :PROPERTIES:
 :ID:       f7f826c5-78c1-4c1f-8d4c-6993a88bfb2f
