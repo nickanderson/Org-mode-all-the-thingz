@@ -39,6 +39,7 @@
 - markup language
 - best supported in emacs
 - system for managing plain text
+- a second brain or exocortex
 
 *** An aside for non emacs users
 
@@ -133,7 +134,7 @@ Memorizing
 Diagrams /flow charts
 #+END_NOTES
 
-* Worklog/Literate Ops
+* Worklog/Literate *Ops
 ** org-capture                                                      :ATTACH:
 :PROPERTIES:
 :ID:       24700353-3d1f-4b94-ac5b-246959ef426f
@@ -142,14 +143,17 @@ Diagrams /flow charts
 
 #+DOWNLOADED: file:///tmp/Spectacle.gJklMb/Screenshot_20190724_141502.png @ 2019-07-24 14:15:36
 [[file:data/24/700353-3d1f-4b94-ac5b-246959ef426f/Screenshot_20190724_141502_2019-07-24_14-15-31.png]]
+- Capture something you need without breaking your flow
 
 #+BEGIN_NOTES
   While running eshell on a remote server, I notice our Rakefile has a spelling
   mistake. Since I should fix that (just not now), I quickly start org-capture
   (specifying a “Bug”), and jot the details for a bug fix at the end of the day.
+  
+  - *this is a good place to start*
 #+END_NOTES
 
-*** org-capture supports a nested menu                             :ATTACH:
+*** org-capture supports sub menus                                 :ATTACH:
 :PROPERTIES:
 :ID:       e1b4ffc3-d90b-4db1-8e0b-7330f16a70f0
 :Attachments: Screenshot_20190724_141639_2019-07-24_14-16-45.png
@@ -157,6 +161,62 @@ Diagrams /flow charts
 
 #+DOWNLOADED: file:///tmp/Spectacle.gJklMb/Screenshot_20190724_141639.png @ 2019-07-24 14:16:45
 [[file:data/e1/b4ffc3-d90b-4db1-8e0b-7330f16a70f0/Screenshot_20190724_141639_2019-07-24_14-16-45.png]]
+
+*** templates improve speed and consistency
+
+**** Example meeting template
+
+#+CAPTION: Template in defvar
+#+BEGIN_SRC elisp
+      ;; BEGIN Capture Templates
+      ;; I picked up this neat trick from the Venerable Sacha Chua
+      (defvar my/org-meeting-template-planning "* %u Meeting About CFEngine Planning   %^G
+  CREATED: %U
+
+  ,*Agenda:*
+   - Demos
+   - Review work in progress
+   - Review newly registered issues
+   - [[https://tracker.mender.io/secure/RapidBoard.jspa?rapidView=26][CFEngine Kanban board]]
+
+  ,** Demos
+  ,** WIP
+  ,** New Issues
+
+
+  " "Meeting Template - Planning")
+#+END_SRC
+
+#+BEGIN_NOTES
+- =%u= :: /inactive/ timestamp, date only
+- =%^G= :: Prompt for tags, with completion all tags in all agenda files
+- =%U= :: /inactive/ timestamp, with date and time
+
+Active timestamps (those wrapped with =<= and =>= will not trigger an entry to show up in the agenda.
+#+END_NOTES
+
+**** Configuring capture templates
+
+#+CAPTION: Configure custom capture templates
+#+BEGIN_SRC elisp
+  ;; Configure custom capture templates
+  (setq org-capture-templates
+        `(;; Note the backtick here, it's required so that the defvar based tempaltes will work!
+          ;;http://comments.gmane.org/gmane.emacs.orgmode/106890
+
+          ;; I have lot's of meetings, so lets have a submenu
+          ("m" "Meetings" )
+          ("mp" "Meeting - Planning/Review" entry (file "~/org/Work/northern.tech/development-meetings.org" )
+           ,my/org-meeting-template-planning :clock-in t :clock-resume t :append t :empty-lines-after 1)
+          ))
+#+END_SRC
+
+#+BEGIN_NOTES
+- =:clock-in t=  :: Clock in when capture begins
+- =:clock-resume t= :: Resume previously running clock when capture ends
+- =:append t= :: Append capture to end of entry
+- =:empty-lines-after 1= :: The number of empty lines to have at the end of a capture
+#+END_NOTES
 
 ** Time Tracking                                                    :ATTACH:
 :PROPERTIES:
@@ -275,7 +335,13 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 | 2019-03-14 |
 
 * Presentations
-- org-reveal, *org-re-reveal*, ox-reveal, [[https://github.com/lorniu/ox-spectacle][ox-spectacle]], org-treeslide, beamer
+- *[[https://gitlab.com/oer/org-re-reveal][org-re-reveal]]*, [[https://github.com/yjwen/org-reveal][ox-reveal]], [[https://github.com/lorniu/ox-spectacle][ox-spectacle]], [[https://github.com/takaxp/org-tree-slide][org-treeslide]], [[https://github.com/eschulte/org-S5][org-S5]], [[https://github.com/eschulte/epresent][epresent]], [[https://github.com/fniessen/refcard-org-beamer][org-beamer]]
+
+#+BEGIN_NOTES
+  - org-re-reveal was forked from [[https://github.com/lechten/org-reveal][org-reveal]]
+  - [[https://github.com/Malabarba/camcorder.el][camcorder.el]], [[https://gitlab.com/ambrevar/emacs-gif-screencast][emacs-gif-screencast]] (not specific to org-mode)
+#+END_NOTE 
+
 * Tables/Spreadsheets
 
 
