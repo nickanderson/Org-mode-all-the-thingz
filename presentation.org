@@ -333,6 +333,16 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 | 2019-03-11 |
 | 2019-03-12 |
 | 2019-03-14 |
+** org-datetree, org-reverse-datetree                               :ATTACH:
+:PROPERTIES:
+:ID:       db037348-eac0-4ab0-8ef1-0a482b86af95
+:Attachments: org-reverse-datetree-1_2019-08-01_13-57-15.png org-reverse-datetree-1_2019-08-01_13-57-52.png
+:END:
+
+- Many entries in one file
+
+#+DOWNLOADED: https://github.com/akirak/org-reverse-datetree/blob/master/screenshots/org-reverse-datetree-1.png?raw=true @ 2019-08-01 13:58:00
+[[file:data/db/037348-eac0-4ab0-8ef1-0a482b86af95/org-reverse-datetree-1_2019-08-01_13-57-52.png]]
 
 * Presentations
 - *[[https://gitlab.com/oer/org-re-reveal][org-re-reveal]]*, [[https://github.com/yjwen/org-reveal][ox-reveal]], [[https://github.com/lorniu/ox-spectacle][ox-spectacle]], [[https://github.com/takaxp/org-tree-slide][org-treeslide]], [[https://github.com/eschulte/org-S5][org-S5]], [[https://github.com/eschulte/epresent][epresent]], [[https://github.com/fniessen/refcard-org-beamer][org-beamer]]
