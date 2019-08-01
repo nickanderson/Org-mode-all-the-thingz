@@ -34,6 +34,10 @@
 :Attachments: 800px-Org-mode-unicorn.svg_2019-07-19_16-43-44.png
 :END:
 
+#+BEGIN_NOTES
+  I think the logo being a magical creature is quite fitting.
+#+END_NOTES
+
 ** What is it?
 - around since 2003
 - markup language
@@ -66,11 +70,10 @@
 - keeping notes, maintaining todo lists, planning projects
 ** Things I do, what interests you?
 
+#+BEGIN_NOTES
 - Worklog/Literate Ops
   - capture & templates
-  - Screenshot/cast
-    - org-download-yank
-    - camcorder.el
+  - Time tracking
   - Jira Tickets
     - ox-jira
     - org-jira
@@ -80,9 +83,6 @@
   - mu4e
   - mbsync
   - org-mime-htmlize
-- Blogging
-  - hugo
-  - org2blog
 - Journal
 - Presentations
   - org-reveal, org-re-reveal
@@ -102,7 +102,6 @@
 Opens up a world of other tings
 - git
 - Chat
-#+BEGIN_NOTES
 Worklog/Literate DevOps/capture
 Languages
 Psql
@@ -236,12 +235,6 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
 #+DOWNLOADED: file:///tmp/Spectacle.gJklMb/Screenshot_20190724_141926.png @ 2019-07-24 14:20:07
 [[file:data/89/370a5e-e413-4d19-9a03-a487e32ae9a8/Screenshot_20190724_141926_2019-07-24_14-20-07.png]]
 
-** Screenshot/Cast
-- =org-download= ::  ~org-download-screenshot~, drag and drop,
-- =camcorder= :: start and stop screen recording, convert to gif
-#+BEGIN_NOTES
-  While working on graphical user interfaces, it can be helpful to quickly pull screen shots into notes.
-#+END_NOTES
 ** Jira                                                             :ATTACH:
 :PROPERTIES:
 :ID:       918b2587-dafd-4bce-bd7d-0dce9866a465
@@ -256,6 +249,12 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   - ox-jira :: exports to jira syntax. Make your tickets and comments beautiful!
   - org-jira :: Modify tickets directly within org-mode or quickly jump to an
                 issue in the web ui
+#+END_NOTES
+** Screenshot/Cast
+- =org-download= ::  ~org-download-screenshot~, drag and drop,
+- =camcorder= :: start and stop screen recording, convert to gif
+#+BEGIN_NOTES
+  While working on graphical user interfaces, it can be helpful to quickly pull screen shots into notes.
 #+END_NOTES
 * Notes
 ** Deft                                                             :ATTACH:
@@ -274,7 +273,7 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   - Literate Programming
   - Reproducible research
   - Jupyter notebook
-#+END_NOTE
+#+END_NOTES
 
 *** CFEngine
 
@@ -340,6 +339,33 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   - dir
   - tangle
 #+END_NOTES
+** Exports
+*** HTML Theme Readtheorg
+:PROPERTIES:
+:ID:       ca042dbe-ca4b-47b3-a8c6-533a5147330f
+:Attachments: readtheorg_2019-08-01_14-53-27.png readtheorg_2019-08-01_14-53-43.png
+:END:
+
+#+DOWNLOADED: https://github.com/fniessen/org-html-themes/blob/master/readtheorg.png?raw=true @ 2019-08-01 14:53:46
+[[file:data/ca/042dbe-ca4b-47b3-a8c6-533a5147330f/readtheorg_2019-08-01_14-53-43.png]]
+
+*** HTML Theme BigBlow                                             :ATTACH:
+:PROPERTIES:
+:ID:       ebd1e5f2-63c0-47b1-80c2-e9db267fc3b1
+:Attachments: bigblow_2019-08-01_14-54-44.png
+:END:
+
+#+DOWNLOADED: https://github.com/fniessen/org-html-themes/blob/master/bigblow.png?raw=true @ 2019-08-01 14:54:47
+[[file:data/eb/d1e5f2-63c0-47b1-80c2-e9db267fc3b1/bigblow_2019-08-01_14-54-44.png]]
+
+*** PDF                                                            :ATTACH:
+:PROPERTIES:
+:ID:       61454799-4f5f-4753-b159-83400115a18c
+:Attachments: finished-styled-spec-pdf_2019-08-01_15-15-31.png
+:END:
+
+#+DOWNLOADED: https://katherine.cox-buday.com/assets/blog/2015/03/14/writing-specs-with-org-mode/finished-styled-spec-pdf.png @ 2019-08-01 15:15:38
+[[file:data/61/454799-4f5f-4753-b159-83400115a18c/finished-styled-spec-pdf_2019-08-01_15-15-31.png]]
 
 * Email
 
@@ -425,7 +451,7 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 #+BEGIN_NOTES
   - org-re-reveal was forked from [[https://github.com/lechten/org-reveal][org-reveal]]
   - [[https://github.com/Malabarba/camcorder.el][camcorder.el]], [[https://gitlab.com/ambrevar/emacs-gif-screencast][emacs-gif-screencast]] (not specific to org-mode)
-#+END_NOTE 
+#+END_NOTES
 
 * Tables/Spreadsheets
 
@@ -526,4 +552,4 @@ to change the way you can interact with tables. Insertion point on the table, =,
   - Laptop
   - FileServer (FreeNAS)
   - Tablet 
-#+END_NOTE
+#+END_NOTES
