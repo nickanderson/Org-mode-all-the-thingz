@@ -309,7 +309,7 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 =Lxf/
 -----END PGP MESSAGE-----
 * Blogging
-- ox-hugo, easy-hugo, org2blog
+- [[https://ox-hugo.scripter.co/][ox-hugo]], [[https://github.com/masasam/emacs-easy-hugo][easy-hugo]], [[https://github.com/org2blog/org2blog][org2blog]] (WordPress), [[https://orgmode.org/worg/org-blog-wiki.html][many options]]
 - *hugo supports org syntax naively*, so I just use that.
 * Journaling
 ** org-journal                                                      :ATTACH:
