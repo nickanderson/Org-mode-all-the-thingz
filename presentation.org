@@ -163,7 +163,7 @@ Diagrams /flow charts
 
 *** templates improve speed and consistency
 
-**** Example meeting template
+*** Example meeting template
 
 #+CAPTION: Template in defvar
 #+BEGIN_SRC elisp
@@ -194,7 +194,7 @@ Diagrams /flow charts
 Active timestamps (those wrapped with =<= and =>= will not trigger an entry to show up in the agenda.
 #+END_NOTES
 
-**** Configuring capture templates
+*** Configuring capture templates
 
 #+CAPTION: Configure custom capture templates
 #+BEGIN_SRC elisp
@@ -238,11 +238,13 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
 ** Jira                                                             :ATTACH:
 :PROPERTIES:
 :ID:       918b2587-dafd-4bce-bd7d-0dce9866a465
-:Attachments: dos-jira-logo_2019-07-24_15-17-28.png
+:Attachments: dos-jira-logo_2019-07-24_15-17-28.png org-jira-demo-update-comment-2019-08-01_15.33.51_2019-08-01_15-38-21.gif
 :END:
 
-#+DOWNLOADED: https://s3.amazonaws.com/doslive/wp-content/uploads/2017/09/16190028/dos-jira-logo.png @ 2019-07-24 15:17:28
-[[file:data/91/8b2587-dafd-4bce-bd7d-0dce9866a465/dos-jira-logo_2019-07-24_15-17-28.png]]
+#+CAPTION: Using org-jira
+#+DOWNLOADED: file:///home/nickanderson/Videos/screencasts/org-jira-demo-update-comment-2019-08-01_15.33.51.gif @ 2019-08-01 15:38:25
+[[file:data/91/8b2587-dafd-4bce-bd7d-0dce9866a465/org-jira-demo-update-comment-2019-08-01_15.33.51_2019-08-01_15-38-21.gif]]
+
 - [[https://github.com/stig/ox-jira.el][ox-jira]], [[https://github.com/ahungry/org-jira][org-jira]]
 
 #+BEGIN_NOTES
