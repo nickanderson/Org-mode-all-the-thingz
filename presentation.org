@@ -350,6 +350,19 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
 
 *** PlantUML Source 
 
+#+BEGIN_SRC org
+  ,#+NAME: MPF-policy-execution-high-level-diagram
+  ,#+begin_src plantuml :file MPF-policy-execution-high-level.png :exports both
+    title High Level MPF Policy Execution Sequence
+
+    create "cf-execd"
+    loop "Check ""body executor control schedule"""
+      note left of "cf-execd"
+        cf-execd checks the schedule once a minute, but the default schedule results
+        in execution once every 5 minutes.
+      end note
+#+END_SRC
+
 #+NAME: MPF-policy-execution-high-level-diagram
 #+begin_src plantuml :file MPF-policy-execution-high-level.png
   title High Level MPF Policy Execution Sequence
