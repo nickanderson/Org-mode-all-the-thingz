@@ -287,6 +287,7 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   - Capture emails to respond
   - Author in org-mode, htmlize with org-mime-htmlize before sending
 #+END_NOTES
+
 * Keeping Secrets
 - Tag entries with =crypt= to automatically encrypt sections of a file with GPG
 - ~org-decrypt-entry~
