@@ -505,3 +505,25 @@ to change the way you can interact with tables. Insertion point on the table, =,
 
 #+DOWNLOADED: https://github.com/enisozgen/idle-org-agenda/blob/master/docs/idle-org-agenda.gif @ 2019-07-25 12:52:30
 [[file:data/cd/fddef3-766c-420e-bf3b-c6f2e09cd43b/idle-org-agenda_2019-07-25_12-52-30.gif]]
+* Going Mobile
+| Android   | iOS       |
+| *[[http://www.orgzly.com/][Orgzly]]*  | [[https://mobileorg.github.io/][MobileOrg]] |
+| [[https://github.com/bnankiewicz/organic][Organic]]   | [[https://beorgapp.com][beorg]]     |
+| [[https://github.com/matburt/mobileorg-android/][MobileOrg]] |           |
+| [[https://github.com/wizmer/syncorg][SyncOrg]]   |           |
+** Orgzly                                                           :ATTACH:
+:PROPERTIES:
+:ID:       25da2224-cc7f-450e-8ea0-38ca45ef5dbe
+:Attachments: Orgzly-Notes-To-Do-Lists_2019-08-01_14-21-39.jpg
+:END:
+
+#+DOWNLOADED: https://alternatives.how2shout.com/wp-content/uploads/2019/07/Orgzly-Notes-To-Do-Lists.jpg @ 2019-08-01 14:21:46
+ [[file:data/25/da2224-cc7f-450e-8ea0-38ca45ef5dbe/Orgzly-Notes-To-Do-Lists_2019-08-01_14-21-39.jpg]]
+
+#+BEGIN_NOTES
+  I use syncthing to keep my org files in sync across multiple devices.
+  - Phone
+  - Laptop
+  - FileServer (FreeNAS)
+  - Tablet 
+#+END_NOTE
