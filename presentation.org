@@ -479,27 +479,37 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   - Author in org-mode, htmlize with org-mime-htmlize before sending
 #+END_NOTES
 
-* Keeping Secrets
+* Keeping Secrets                                                    :ATTACH:
+:PROPERTIES:
+:ID:       b01de368-6a9b-4f65-a786-aaaffd407f1a
+:Attachments: org-mode-demo-crypt-2019-08-02_11.55.03_2019-08-02_11-57-47.gif
+:END:
 - Tag entries with =crypt= to automatically encrypt sections of a file with GPG
 - ~org-decrypt-entry~
-** For my eyes only :crypt:
+
+#+DOWNLOADED: file:///home/nickanderson/Videos/screencasts/org-mode-demo-crypt-2019-08-02_11.55.03.gif @ 2019-08-02 11:57:50
+[[file:data/b0/1de368-6a9b-4f65-a786-aaaffd407f1a/org-mode-demo-crypt-2019-08-02_11.55.03_2019-08-02_11-57-47.gif]]
+
+** For my eyes only :crypt: 
 -----BEGIN PGP MESSAGE-----
 
-hQIMA/jYNcPWXvJ6ARAAygauqE6m4hK1h2LX/P43L1kXoaVyIdpge9RKFbejEDho
-SokDEGtdshtUatiQmcqMiTDhnL+1B6gjMMXhdG5J0VmigXghY8+NyYN9ndKfDi09
-Vd68XxP36X/EKDS4oH+0CrtiWR4UojX9GW7xA6wdIRP7spR3Lc4bRNcIxbLhNr59
-JDAM2u5yQE4rRhlwjbzUNF5QGrmY1UKL3gOklfGBZdpIs7EI14n24WBQJTP4cmi0
-nAKY3NzvUyj4r+BF2g1Bx21lusuwPH3NXSkgjmHK4yZrGNyQXr1Xnv30pHls5Zvr
-j8IFAxpQ6sSw9CEI11uAhBx/CZUYSosHy36njUOsoLU8Muu0r6GruU8zDPmo47Qj
-q4tq3GVi/BgFds+vSMMHyom8gmTLK82WuETF/CPIkrdIIkpt9zTCRTzkeRF1U9LE
-33PHKWsPji3wAjt0KrSArnRTGDI9qEJDU0rtouT1d5GIN8nzUJw8Np/GTPQ/SNR9
-nyxPhevEzCCXGxBDf6cYjQpqMJuqGUmHhq8MzhuyAAXVOB5L0eirdPE+bczWNHrM
-xcVZr7Ofb6bJQYWy2FG0VWz28wFnhw75v9fEdPpyDAhMsn9TU/g15Shh72Hy+MGM
-G4X3iC5fdmnXjOz3Ig3cNIMFTyIgNL0RMUZEyoXJ4AC8KrulQnAPgxFORvHjmRzS
-UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
-9P1MogqpjoOuCKjEqXKwqGBexsLkxSgQXbDUnuNcvTaE
-=Lxf/
+hQIMA/jYNcPWXvJ6AQ//arpfgjdLa/EwjMhxj8AA7X1qkAB/da9LKyuOoDzMWaMc
+p+3HqpdC0n5/KsfmQes4KBfyHOf3Ty3FzlNwBVA9qwGFY1UfXV8WYAAv2MZF/97p
+riWzuMVBNgcdm/rCQTdP5zUgOCzpquJxDvnB39+E0dMvBY9sVjvJphzXEa6goz+6
+8QHYyDSNDcvSIwZv3Oi+0wxAasTptYuPOqmwfRoybICICgoX/Sn2d7NH5sYclYRg
+nQJ6nGO4ozq/oRKPy/oD+YlgOUDeGlCeA+D0XsLW0DAdGigIHZ571cijEAvNj1QP
+eGGZ/fIm46gL5XU+CzK6rq9KqXtH2zTTzVJYRRzRhe7Fwtcgc0KPm1D+YqEyPBrK
+mPdqpGNYU9Ko6muBDUj+MTIIeDKdOc4Ao778h41lGTjqSQ4v+2N6AB0HcQV09vMt
+9GyHLKUiM5H8qxtvewGXBil7iZh9MxlNdyNG57eoCIfjnMysX6KX3hoicrFD3Tps
+1pojbZRXu1xaKSkaH5Pcx89NbkJXZRA9fvFqvT6/LZDAhJ+Fs2vgo9M+K8PaUuq5
+dp9EEWvc6FIkPXIgf0cArdZHR9Gm+f4gXA/mf5e4GLUrmH7SifFV3xrLdyyEat7X
+f1OsFWwOjmGz6aXBaOKgu/74EVYX+l1ap2j/0a7ZSdVchqL7g57njD0XN/6eILHS
+TAGe8a76cd/M0BO42W9+VYsUWKSb0e9+Z7fHPmo3VpcriaVl/OTJqdEcQTY98J5l
+XZdnAeMFy0z3ntITFFbjlNbhNpMlXRxWs0xJi4k=
+=bdCS
 -----END PGP MESSAGE-----
+
+
 * Blogging
 - [[https://ox-hugo.scripter.co/][ox-hugo]], [[https://github.com/masasam/emacs-easy-hugo][easy-hugo]], [[https://github.com/org2blog/org2blog][org2blog]] (WordPress), [[https://orgmode.org/worg/org-blog-wiki.html][many options]]
 - I use *hugo's native org support* (but it's also naive)
