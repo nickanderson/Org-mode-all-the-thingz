@@ -415,6 +415,22 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   end
 #+end_src
 
+** Literate programming
+- Donald Knuth
+
+#+BEGIN_NOTES
+  Literate programming was first introduced by Knuth in 1984. The main intention
+  behind this approach was to treat a program as literature understandable to
+  human beings.
+#+END_NOTES
+
+*** Examples
+- [[https://github.com/zzamboni/dot-emacs/blob/master/init.org][Literate Emacs Config]]
+  - https://zzamboni.org/post/my-emacs-configuration-with-commentary/
+  - *both tangled files and blog post from same source*
+- [[https://gitlab.com/nickanderson/cfengine-enterprise-demo/tree/3.14.0a][Literate Infra Policy]]
+- [[https://www.jstatsoft.org/article/view/v046i03][Reproducible Research]]
+     
 * Exporting
 ** HTML Theme Readtheorg
 :PROPERTIES:
@@ -486,7 +502,8 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 -----END PGP MESSAGE-----
 * Blogging
 - [[https://ox-hugo.scripter.co/][ox-hugo]], [[https://github.com/masasam/emacs-easy-hugo][easy-hugo]], [[https://github.com/org2blog/org2blog][org2blog]] (WordPress), [[https://orgmode.org/worg/org-blog-wiki.html][many options]]
-- *hugo supports org syntax naively*, so I just use that.
+- I use *hugo's native org support* (but it's also naive)
+
 * Journaling
 ** org-journal                                                      :ATTACH:
 :PROPERTIES:
@@ -591,11 +608,11 @@ UAF4y/iDJia45wGWIC+6J+seIRKx65ZX2gtCc/LFCGx1LEYuPqFTTkwa+Pw52DVa
 #+DOWNLOADED: https://github.com/enisozgen/idle-org-agenda/blob/master/docs/idle-org-agenda.gif @ 2019-07-25 12:52:30
 [[file:data/cd/fddef3-766c-420e-bf3b-c6f2e09cd43b/idle-org-agenda_2019-07-25_12-52-30.gif]]
 * Going Mobile
-| Android   | iOS       |
-| *[[http://www.orgzly.com/][Orgzly]]*  | [[https://mobileorg.github.io/][MobileOrg]] |
-| [[https://github.com/bnankiewicz/organic][Organic]]   | [[https://beorgapp.com][beorg]]     |
-| [[https://github.com/matburt/mobileorg-android/][MobileOrg]] |           |
-| [[https://github.com/wizmer/syncorg][SyncOrg]]   |           |
+| Android   | iOS       | Web     |
+| *[[http://www.orgzly.com/][Orgzly]]*  | [[https://mobileorg.github.io/][MobileOrg]] | [[https://org-web.org][org-web]] |
+| [[https://github.com/bnankiewicz/organic][Organic]]   | [[https://beorgapp.com][beorg]]     |         |
+| [[https://github.com/matburt/mobileorg-android/][MobileOrg]] |           |         |
+| [[https://github.com/wizmer/syncorg][SyncOrg]]   |           |         |
 ** Orgzly                                                           :ATTACH:
 :PROPERTIES:
 :ID:       25da2224-cc7f-450e-8ea0-38ca45ef5dbe
