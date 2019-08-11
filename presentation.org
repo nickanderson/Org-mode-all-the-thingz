@@ -22,7 +22,7 @@
 #+REVEAL_HEAD_PREAMBLE: <meta name=description" content=Org-mode all the thingz!">
 #+REVEAL_POSTAMBLE: <p> Created by Nick Anderson. </p>
 #+REVEAL_PLUGINS: (notes)
-#+OPTIONS: reveal_single_file:nil
+#+OPTIONS: reveal_single_file:t
 
 #+DOWNLOADED: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Org-mode-unicorn.svg/800px-Org-mode-unicorn.svg.png @ 2019-07-19 16:43:44
 * org-mode                                                           :ATTACH:
@@ -37,6 +37,17 @@
 #+BEGIN_NOTES
   I think the logo being a magical creature is quite fitting.
 #+END_NOTES
+
+** Who am I?
+- Hail from Lawrence, KS
+- Work in Open Source mostly on CFEngine at Northern.tech
+
+#+BEGIN_NOTES
+  - Background as sysadmin
+  - C, CFEngine Policy, Shell, Perl, Python, PHP, SQL, Ruby,
+  - Work with customers, developers, business
+  - Make presentations, documents, reports
+#+END_NOTE
 
 ** What is it?
 - around since 2003
@@ -132,7 +143,6 @@ Contacts
 Memorizing
 Diagrams /flow charts
 #+END_NOTES
-
 * Worklog/Literate *Ops
 ** org-capture                                                      :ATTACH:
 :PROPERTIES:
@@ -341,6 +351,7 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
 #+BEGIN_NOTES
   - dir
   - tangle
+  - sessions
 #+END_NOTES
 
 ** Diagrams
@@ -461,8 +472,7 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
 
 * Email
 
-- [[https://www.djcbsoftware.nl/code/mu/mu4e.html][mu4e]], [[https://notmuchmail.org/notmuch-emacs/][notmuch]], [[https://github.com/org-mime/org-mime][org-mime]]
-
+- [[https://www.djcbsoftware.nl/code/mu/mu4e.html][mu4e]], [[https://notmuchmail.org/notmuch-emacs/][notmuch]], [[https://github.com/org-mime/org-mime][org-mime]], org-contacts, org-msg?
 ** mu4e                                                             :ATTACH:
 :PROPERTIES:
 :ID:       f7f826c5-78c1-4c1f-8d4c-6993a88bfb2f
@@ -477,6 +487,7 @@ Active timestamps (those wrapped with =<= and =>= will not trigger an entry to s
   - postfix used for offline sending
   - Capture emails to respond
   - Author in org-mode, htmlize with org-mime-htmlize before sending
+  - https://www.reddit.com/r/emacs/comments/8toivy/tip_how_to_manage_your_contacts_with_orgcontacts/e19iy2c/
 #+END_NOTES
 
 * Keeping Secrets                                                    :ATTACH:
@@ -508,7 +519,6 @@ TAGe8a76cd/M0BO42W9+VYsUWKSb0e9+Z7fHPmo3VpcriaVl/OTJqdEcQTY98J5l
 XZdnAeMFy0z3ntITFFbjlNbhNpMlXRxWs0xJi4k=
 =bdCS
 -----END PGP MESSAGE-----
-
 
 * Blogging
 - [[https://ox-hugo.scripter.co/][ox-hugo]], [[https://github.com/masasam/emacs-easy-hugo][easy-hugo]], [[https://github.com/org2blog/org2blog][org2blog]] (WordPress), [[https://orgmode.org/worg/org-blog-wiki.html][many options]]
@@ -617,6 +627,15 @@ XZdnAeMFy0z3ntITFFbjlNbhNpMlXRxWs0xJi4k=
 
 #+DOWNLOADED: https://github.com/enisozgen/idle-org-agenda/blob/master/docs/idle-org-agenda.gif @ 2019-07-25 12:52:30
 [[file:data/cd/fddef3-766c-420e-bf3b-c6f2e09cd43b/idle-org-agenda_2019-07-25_12-52-30.gif]]
+** Finding things
+- org-agenda
+- [[https://github.com/alphapapa/org-rifle][org-rifle]]
+- [[https://github.com/alphapapa/org-ql][org-ql]]
+- [[https://github.com/alphapapa/org-sidebar][org-sidebar]]
+** Also
+- org-caldav
+- org-calfw
+- org-gcal
 * Going Mobile
 | Android   | iOS       | Web     |
 | *[[http://www.orgzly.com/][Orgzly]]*  | [[https://mobileorg.github.io/][MobileOrg]] | [[https://org-web.org][org-web]] |
@@ -639,3 +658,32 @@ XZdnAeMFy0z3ntITFFbjlNbhNpMlXRxWs0xJi4k=
   - FileServer (FreeNAS)
   - Tablet 
 #+END_NOTES
+* Bookmarks and Web Archiving
+
+- [[https://github.com/alphapapa/org-web-tools][org-web-tools]] :: Convert webpage into org-format
+- [[https://github.com/scallywag/org-board][org-board]] :: bookmarking and archiving
+
+#+BEGIN_NOTES
+  Example of how I looked something up from org-mode.
+  - Google for =holger wsu physics= (highlight, ~SPC a /~)
+  - eww-copy-page-url
+  - org-web-tools-read-url-as-org, org-web-tools-insert-webpage-as-entry
+#+END_NOTES
+* Other stuff
+- archiving
+- org-drill
+- org-randomnote
+- org-d20, org-lookup-dnd
+- org-make-toc
+* Gimmie Moar
+
+- [[http://doc.norang.ca/org-mode.html][Bernt Hansen]]
+- [[http://www.howardism.org/][Howard Abrams]]
+  - [[https://www.youtube.com/watch?v=dljNabciEGg][Literate DevOps]]
+- [[https://sachachua.com/blog/category/geek/emacs/][Sasha Chua]]
+- [[https://kitchingroup.cheme.cmu.edu/blog/category/orgmode/][John Kitchen]]
+- [[https://www.google.com/search?q=org-mode&sitesearch=http%253A%252F%252Fjr0cket.co.uk][John Stevenson]]
+- [[https://irreal.org/blog/?s=org-mode][John Snader]]
+
+- [[https://www.youtube.com/watch?v=oJTwQvgfgMM][Google TechTalk]]
+  
