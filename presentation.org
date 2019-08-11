@@ -22,7 +22,7 @@
 #+REVEAL_HEAD_PREAMBLE: <meta name=description" content=Org-mode all the thingz!">
 #+REVEAL_POSTAMBLE: <p> Created by Nick Anderson. </p>
 #+REVEAL_PLUGINS: (notes)
-#+OPTIONS: reveal_single_file:nil
+#+OPTIONS: reveal_single_file:t
 
 #+DOWNLOADED: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Org-mode-unicorn.svg/800px-Org-mode-unicorn.svg.png @ 2019-07-19 16:43:44
 * org-mode                                                           :ATTACH:
@@ -47,7 +47,7 @@
   - C, CFEngine Policy, Shell, Perl, Python, PHP, SQL, Ruby,
   - Work with customers, developers, business
   - Make presentations, documents, reports
-#+END_NOTE
+#+END_NOTES
 
 ** What is it?
 - around since 2003
